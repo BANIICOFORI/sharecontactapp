@@ -2,9 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 //import { TouchableOpacity } from "react-native-gesture-handler";
 import { TextInput } from "react-native-paper";
-import imgphoto from "../Components/images/Mphoto.jpg"
+import imgphoto from "../Components/images/Mphoto.jpg";
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image source={imgphoto} style={styles.img} />
@@ -21,7 +21,9 @@ const LoginScreen = () => {
           
         />
       </View>
-      <TouchableOpacity style={styles.LoginButton}>
+      <TouchableOpacity onPress={()=>{
+       navigation.navigate("QRGenerator")
+     }} style={styles.LoginButton}>
         <Text style={styles.LoginButtonText}>SING IN</Text>
       </TouchableOpacity>
      
@@ -91,14 +93,14 @@ const styles = StyleSheet.create({
     outlineStyle: 'none',
   },
   LoginButton: {
-    backgroundColor: "#ff4d4d",
-    width: 360,
+    backgroundColor: "#ff1a75",
+    width: 300,
     height: 60,
     alignSelf: "center",
     justifyContent: "center",
     marginTop: 20,
     marginBottom:50,
-    borderRadius: 5,
+    borderRadius: 10,
   },
   LoginButtonText:{
     textAlign:"center",

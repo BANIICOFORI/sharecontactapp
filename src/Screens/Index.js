@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { View,Text,StyleSheet,Image,TouchableOpacity } from 'react-native';
-import Logo from "../Components/images/OIP.jpg"
+import Logo from "../Components/images/photo1.jpg"
 
 const Index = ({navigation}) => {
   return (
@@ -99,10 +99,7 @@ const styles = StyleSheet.create({
      fontWeight:"bold",
      marginHorizontal:10,
       justifyContent: 'center',
-      
-      
     },
-
     img:{
         width:360,
         height:360,
